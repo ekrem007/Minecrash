@@ -17,7 +17,6 @@ public class AdManager : MonoBehaviour
     {
         Appodeal.disableNetwork(AppodealNetworks.A4G);
         Appodeal.disableNetwork(AppodealNetworks.AMAZON_ADS);
-        Appodeal.disableNetwork(AppodealNetworks.ADMOB);
         Appodeal.disableNetwork(AppodealNetworks.IRONSOURCE);
         Appodeal.disableNetwork(AppodealNetworks.MY_TARGET);
         Appodeal.disableNetwork(AppodealNetworks.STARTAPP);

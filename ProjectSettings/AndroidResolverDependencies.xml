@@ -4,6 +4,7 @@
     <package>com.adcolony:sdk:4.3.0</package>
     <package>com.applovin:applovin-sdk:9.14.4</package>
     <package>com.appodeal.ads.sdk.networks:adcolony:2.7.4.8@aar</package>
+    <package>com.appodeal.ads.sdk.networks:admob:2.7.4.6@aar</package>
     <package>com.appodeal.ads.sdk.networks:applovin:2.7.4.7@aar</package>
     <package>com.appodeal.ads.sdk.networks:appodealx:2.7.4.2</package>
     <package>com.appodeal.ads.sdk.networks:facebook:2.7.4.7@aar</package>
@@ -17,6 +18,7 @@
     <package>com.explorestack.ogury:sdk:4.7.6</package>
     <package>com.explorestack:consent:1.0.1</package>
     <package>com.facebook.android:audience-network-sdk:6.1.0</package>
+    <package>com.google.android.gms:play-services-ads:19.4.0</package>
     <package>com.google.android.gms:play-services-ads-identifier:17.0.0</package>
     <package>com.google.android.gms:play-services-base:17.0.0</package>
     <package>com.google.android.gms:play-services-basement:17.3.0</package>
@@ -27,6 +29,7 @@
     <file>Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar</file>
     <file>Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar</file>
     <file>Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.core.core-1.2.0.aar</file>
@@ -54,6 +57,7 @@
     <file>Assets/Plugins/Android/com.applovin.applovin-sdk-9.14.4.aar</file>
     <file>Assets/Plugins/Android/com.appodeal.ads.sdk.core-2.7.4.aar</file>
     <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.adcolony-2.7.4.8.aar</file>
+    <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.admob-2.7.4.6.aar</file>
     <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.applovin-2.7.4.7.aar</file>
     <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.appodeal-2.7.4.2.aar</file>
     <file>Assets/Plugins/Android/com.appodeal.ads.sdk.networks.appodealx-2.7.4.2.aar</file>
@@ -71,10 +75,16 @@
     <file>Assets/Plugins/Android/com.explorestack.ogury.sdk-4.7.6.aar</file>
     <file>Assets/Plugins/Android/com.explorestack.protobuf-java-1.0.0.jar</file>
     <file>Assets/Plugins/Android/com.facebook.android.audience-network-sdk-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-19.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-19.4.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-19.4.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.3.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-gass-19.4.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-17.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.1.0.aar</file>
     <file>Assets/Plugins/Android/com.google.code.gson.gson-2.8.6.jar</file>
     <file>Assets/Plugins/Android/com.squareup.okhttp3.okhttp-3.12.12.jar</file>
     <file>Assets/Plugins/Android/com.squareup.okio.okio-1.15.0.jar</file>
