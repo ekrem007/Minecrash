@@ -60,3 +60,5 @@ crashlytics-build.properties
 
 *.aar
 *.jar
+*.aar.meta
+*.jar.meta

@@ -21,7 +21,6 @@ public class AdManager : MonoBehaviour
         Appodeal.disableNetwork(AppodealNetworks.MY_TARGET);
         Appodeal.disableNetwork(AppodealNetworks.STARTAPP);
         Appodeal.disableNetwork(AppodealNetworks.SMAATO);
-        Appodeal.disableNetwork(AppodealNetworks.YANDEX);
         Appodeal.initialize("c1a119049e99b7ebaae0601c243533ecda10ec0035cb945a", Appodeal.BANNER_BOTTOM | Appodeal.NON_SKIPPABLE_VIDEO | Appodeal.INTERSTITIAL, false);
     }
 }

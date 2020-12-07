@@ -24,6 +24,17 @@ public class LoseUI : MonoBehaviour
             FindObjectOfType<Sound>().fail();
         }
         Handheld.Vibrate();
-        Appodeal.show(Appodeal.NON_SKIPPABLE_VIDEO);
+        switch (Random.Range(0, 3))
+        {
+            case 0:
+                Appodeal.show(Appodeal.INTERSTITIAL);
+                break;
+            case 1:
+                Appodeal.show(Appodeal.NON_SKIPPABLE_VIDEO);
+                break;
+            case 2:
+                Appodeal.show(Appodeal.REWARDED_VIDEO);
+                break;
+        }
     }
 }
