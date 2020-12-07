@@ -22,7 +22,7 @@ namespace ConsentManager.ConsentManagerDemo.Scripts
         private const string CACHE_REWARDED_VIDEO = "CACHE REWARDED VIDEO";
 
         #endregion
-        
+
         #region UI
 
         [SerializeField] public Toggle tgTesting;
@@ -37,18 +37,16 @@ namespace ConsentManager.ConsentManagerDemo.Scripts
 #if UNITY_EDITOR && !UNITY_ANDROID && !UNITY_IPHONE
         string appKey = "";
 #elif UNITY_ANDROID
-        string appKey = "fee50c333ff3825fd6ad6d38cff78154de3025546d47a84f";
-#elif UNITY_IPHONE
-        string appKey = "466de0d625e01e8811c588588a42a55970bc7c132649eede";
+        string appKey = "c1a119049e99b7ebaae0601c243533ecda10ec0035cb945a";
 #else
-	string appKey = "";
+        string appKey = "";
 #endif
 
         private ConsentForm consentForm;
         private Api.ConsentManager consentManager;
         private bool isShouldSaveConsentForm;
         public Consent currentConsent;
-        
+
         private void Start()
         {
             consentManagerPanel.gameObject.SetActive(true);
@@ -67,11 +65,13 @@ namespace ConsentManager.ConsentManagerDemo.Scripts
 
         private void OnDestroy()
         {
-            Appodeal.destroy(Appodeal.BANNER); 
+            Appodeal.destroy(Appodeal.BANNER);
         }
 
-        private void OnApplicationFocus(bool hasFocus) {
-            if(hasFocus) {
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            if (hasFocus)
+            {
                 Appodeal.onResume(Appodeal.BANNER_BOTTOM);
             }
         }
@@ -87,9 +87,9 @@ namespace ConsentManager.ConsentManagerDemo.Scripts
                     "Appodeal Test",
                     "com.appodeal.test",
                     "https://customvendor.com")
-                .setPurposeIds(new List<int> {100, 200, 300})
-                .setFeatureId(new List<int> {400, 500, 600})
-                .setLegitimateInterestPurposeIds(new List<int> {700, 800, 900})
+                .setPurposeIds(new List<int> { 100, 200, 300 })
+                .setFeatureId(new List<int> { 400, 500, 600 })
+                .setLegitimateInterestPurposeIds(new List<int> { 700, 800, 900 })
                 .build();
 
             consentManager.setCustomVendor(customVendor);

@@ -129,7 +129,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.113
+  bundleVersion: 1.114
   preloadedAssets:
   - {fileID: 8300000, guid: 1343a43add59f5e46885c3950f0af9d5, type: 3}
   - {fileID: 8300000, guid: 48abe81389e22374d9b857b60ff8dc85, type: 3}
@@ -184,7 +184,7 @@ PlayerSettings:
     tvOS: 
   buildNumber:
     iPhone: 
-  AndroidBundleVersionCode: 1113
+  AndroidBundleVersionCode: 1114
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
@@ -262,7 +262,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/ekrem/OneDrive/Minecrash/Minecrash.keystore
+  AndroidKeystoreName: '{inproject}: Minecrash.keystore'
   AndroidKeyaliasName: minecrash
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 0
