@@ -129,7 +129,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.114
+  bundleVersion: 1.115
   preloadedAssets:
   - {fileID: 8300000, guid: 1343a43add59f5e46885c3950f0af9d5, type: 3}
   - {fileID: 8300000, guid: 48abe81389e22374d9b857b60ff8dc85, type: 3}
@@ -184,10 +184,10 @@ PlayerSettings:
     tvOS: 
   buildNumber:
     iPhone: 
-  AndroidBundleVersionCode: 1114
+  AndroidBundleVersionCode: 1115
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 0
+  AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -683,7 +683,8 @@ PlayerSettings:
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
-  il2cppCompilerConfiguration: {}
+  il2cppCompilerConfiguration:
+    Android: 1
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
