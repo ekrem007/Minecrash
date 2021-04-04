@@ -20,4 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minecrash/Scenes/PlayScene.unity
     guid: c889fc5f4b4472545b5ee98f608f16fb
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 1e4532274f000d6428b3a0ecd93fe789, type: 2}
