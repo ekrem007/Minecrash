@@ -23,6 +23,7 @@ public class LoseUI : MonoBehaviour
         {
             FindObjectOfType<Sound>().fail();
         }
+#if UNITY_ANDROID || UNITY_IPHONE
         Handheld.Vibrate();
         switch (Random.Range(0, 3))
         {
@@ -36,5 +37,6 @@ public class LoseUI : MonoBehaviour
                 Appodeal.show(Appodeal.REWARDED_VIDEO);
                 break;
         }
+#endif
     }
 }

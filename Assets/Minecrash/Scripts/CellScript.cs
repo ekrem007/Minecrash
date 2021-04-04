@@ -99,9 +99,8 @@ public class CellScript : MonoBehaviour
 #if UNITY_EDITOR
         mapdata = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(@assetpath).ToString();
 #else
-
-				TextAsset txtass = (TextAsset)Resources.Load ("Maps/" + mapname, typeof(TextAsset));
-				mapdata = txtass.ToString ();
+		TextAsset txtass = (TextAsset)Resources.Load ("Maps/" + mapname, typeof(TextAsset));
+		mapdata = txtass.ToString ();
 #endif
         string[] result = mapdata.Split(new char[] { '	', '\n' });
         int dem = 0;

@@ -35,15 +35,19 @@ public class AdManager : MonoBehaviour, IPermissionGrantedListener
         {
             DontDestroyOnLoad(this.gameObject);
         }
+#if UNITY_ANDROID || UNITY_IPHONE
         Appodeal.requestAndroidMPermissions(this);
+#endif
     }
     void Start()
     {
+#if UNITY_ANDROID || UNITY_IPHONE
         Appodeal.initialize("c1a119049e99b7ebaae0601c243533ecda10ec0035cb945a", Appodeal.BANNER_BOTTOM | Appodeal.BANNER_RIGHT | Appodeal.INTERSTITIAL | Appodeal.NON_SKIPPABLE_VIDEO | Appodeal.REWARDED_VIDEO, true);
         if (Debug.isDebugBuild)
         {
             Appodeal.setLogLevel(Appodeal.LogLevel.Verbose);
             Appodeal.showTestScreen();
         }
+#endif
     }
 }

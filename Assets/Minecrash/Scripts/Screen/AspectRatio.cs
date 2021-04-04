@@ -48,8 +48,10 @@ public class AspectRatio : MonoBehaviour
             scene.transform.localPosition = new Vector2(-0.5f, -0.85f);
             scene.transform.localRotation = Quaternion.Euler(0, 0, 90);
 
+#if UNITY_ANDROID || UNITY_IPHONE
             Appodeal.hide(Appodeal.BANNER);
             Appodeal.show(Appodeal.BANNER_RIGHT);
+#endif
         }
         else
         {
@@ -58,8 +60,10 @@ public class AspectRatio : MonoBehaviour
             scene.transform.localPosition = new Vector2(0, 0);
             scene.transform.localRotation = Quaternion.Euler(0, 0, 0);
 
+#if UNITY_ANDROID || UNITY_IPHONE
             Appodeal.hide(Appodeal.BANNER);
             Appodeal.show(Appodeal.BANNER_BOTTOM);
+#endif
         }
     }
 }

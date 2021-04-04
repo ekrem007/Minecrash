@@ -299,5 +299,5 @@
     <Map Level="296" Name="3-98" Locked="false" Stars="0" HightScore="0" />
     <Map Level="297" Name="3-99" Locked="false" Stars="0" HightScore="0" />
   </Maps>
-  <path>E:/Projects/kimcuong/kimcuong-Android/Assets/WorldData.xml</path>
+  <path>C:\Unity\Projects\Minecrash\Assets\Minecrash\Resources\WorldData.xml</path>
 </WorldMap>

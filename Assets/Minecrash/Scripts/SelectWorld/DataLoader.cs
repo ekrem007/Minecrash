@@ -87,20 +87,7 @@ public class DataLoader : MonoBehaviour
 
     void DataDefaultLoader()
     {
-        string AssetFileName = "WorldData";
-        string AssetFilePath;
-#if UNITY_IPHONE
-        AssetFilePath = @"Assets/Minecrash/Resources/" + AssetFileName + ".txt";
-#else
-        AssetFilePath = @"Assets/Minecrash/Resources/" + AssetFileName + ".xml";
-#endif
-
-        string XmlString = "";
-#if UNITY_EDITOR
-        XmlString = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(AssetFilePath).ToString();
-#else
-		XmlString = ((TextAsset)Resources.Load (AssetFileName, typeof(TextAsset))).ToString ();
-#endif
+        string XmlString = ((TextAsset)Resources.Load("WorldData", typeof(TextAsset))).ToString();
         PlayerPrefs.SetString("DATA", XmlString);
         PlayerPrefs.SetString("FIRSTTIME", "False");
     }

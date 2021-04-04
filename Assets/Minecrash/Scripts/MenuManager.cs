@@ -168,18 +168,24 @@ public class MenuManager : MonoBehaviour
     }
     public void CreateAds()
     {
+#if UNITY_ANDROID || UNITY_IPHONE
         Appodeal.show(Appodeal.BANNER_BOTTOM);
+#endif
     }
     public void RemoveAds()
     {
+#if UNITY_ANDROID || UNITY_IPHONE
         if (previousScene == "HomeScene" || MapLoader.Mode != 1)
             Appodeal.hide(Appodeal.BANNER);
+#endif
     }
     void OnApplicationFocus(bool hasFocus)
     {
+#if UNITY_ANDROID || UNITY_IPHONE
         if (hasFocus)
         {
             Appodeal.onResume(Appodeal.BANNER);
         }
+#endif
     }
 }
