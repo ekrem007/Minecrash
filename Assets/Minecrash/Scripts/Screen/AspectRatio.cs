@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI.Extensions;
-using AppodealAds.Unity.Api;
 public class AspectRatio : MonoBehaviour
 {
     public GameObject scene;

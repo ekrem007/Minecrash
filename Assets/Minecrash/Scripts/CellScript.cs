@@ -19,11 +19,13 @@ public class CellScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         Cells = new GameObject[7, 9];
         map = new int[7, 9];
-        map = mapReader(MapLoader.MapPlayer.Name);
-        GribCreate(map);
+        if (MapLoader.MapPlayer != null)
+        {
+            map = mapReader(MapLoader.MapPlayer.Name);
+            GribCreate(map);
+        }
     }
 
     void Update()

@@ -56,42 +56,44 @@ public class MapLoader : MonoBehaviour
 
     void setLvlabel()
     {
-        int chuc;
-        int dv;
-        string lvltext = "";
-        if (MapPlayer.Level <= 99)
+        if (MapPlayer != null)
         {
-            chuc = MapPlayer.Level / 10;
-            dv = MapPlayer.Level % 10;
-            lvltext = MapPlayer.Level.ToString();
-        }
-        else if (MapPlayer.Level <= 198)
-        {
-            chuc = (MapPlayer.Level - 99) / 10;
-            dv = (MapPlayer.Level - 99) % 10;
-            lvltext = (MapPlayer.Level - 99).ToString();
-        }
-        else
-        {
-            chuc = (MapPlayer.Level - 198) / 10;
-            dv = (MapPlayer.Level - 198) % 10;
-            lvltext = (MapPlayer.Level - 198).ToString();
-        }
-        TextMenu[1].text = MapPlayer.HightScore.ToString();
-        TextMenu[2].text = lvltext;
+            int chuc;
+            int dv;
+            string lvltext = "";
+            if (MapPlayer.Level <= 99)
+            {
+                chuc = MapPlayer.Level / 10;
+                dv = MapPlayer.Level % 10;
+                lvltext = MapPlayer.Level.ToString();
+            }
+            else if (MapPlayer.Level <= 198)
+            {
+                chuc = (MapPlayer.Level - 99) / 10;
+                dv = (MapPlayer.Level - 99) % 10;
+                lvltext = (MapPlayer.Level - 99).ToString();
+            }
+            else
+            {
+                chuc = (MapPlayer.Level - 198) / 10;
+                dv = (MapPlayer.Level - 198) % 10;
+                lvltext = (MapPlayer.Level - 198).ToString();
+            }
+            TextMenu[1].text = MapPlayer.HightScore.ToString();
+            TextMenu[2].text = lvltext;
 
-        lv[1].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = numbersprite[chuc];
-        lv[1].transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = numbersprite[dv];
+            lv[1].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = numbersprite[chuc];
+            lv[1].transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = numbersprite[dv];
 
-        Destroy(Instantiate(lv[0]), 2f);
-        Destroy(Instantiate(lv[1]), 2f);
-
+            Destroy(Instantiate(lv[0]), 2f);
+            Destroy(Instantiate(lv[1]), 2f);
+        }
     }
 
     void setbackground()
     {
         int inx = 1;
-        if (MapLoader.Mode == 1)
+        if (MapLoader.Mode == 1 && MapPlayer != null)
             inx = int.Parse(MapPlayer.Name.Substring(0, 1));
         else
             inx = Random.Range(1, 4);

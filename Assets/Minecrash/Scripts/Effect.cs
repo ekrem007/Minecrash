@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-
 public class Effect : MonoBehaviour
 {
     public static int bonusLighting = 0;
@@ -8,7 +7,6 @@ public class Effect : MonoBehaviour
 
     public static void SpawnNumber(Vector2 pos, GameObject obj, Sprite[] s, float time)
     {
-
         EffectTimer.isResetCombo = false;
         GameObject tmp = Instantiate(obj) as GameObject;
         int idx = EffectTimer.Combo / 3;
@@ -20,7 +18,7 @@ public class Effect : MonoBehaviour
         if (MapLoader.Mode == 0)
             GameObject.Find("Main Camera").GetComponent<Menu>().scoreinc((idx + 1) * 5);
         tmp.transform.Find("Render").GetComponent<SpriteRenderer>().sprite = s[idx];
-        tmp.transform.localPosition = new Vector3(pos.x, pos.y, -0.4f);
+        tmp.transform.localPosition = new Vector3(pos.x, pos.y, -0.8f);
 
         GameObject.Find("Screen").GetComponent<MapLoader>().Scoreupdate();
 
@@ -128,7 +126,7 @@ public class Effect : MonoBehaviour
             FindObjectOfType<Sound>().elec();
         }
         GameObject tmp = Instantiate(obj) as GameObject;
-        tmp.transform.localPosition = new Vector3(0, y, -0.3f);
+        tmp.transform.localPosition = new Vector3(0, y, -0.6f);
         Destroy(tmp, 0.4f);
     }
     public static void ColumnLighting(float x, GameObject obj)
@@ -138,7 +136,7 @@ public class Effect : MonoBehaviour
             FindObjectOfType<Sound>().elec();
         }
         GameObject tmp = Instantiate(obj) as GameObject;
-        tmp.transform.localPosition = new Vector3(x, -0.7f, -0.3f);
+        tmp.transform.localPosition = new Vector3(x, -0.7f, -0.6f);
         Destroy(tmp, 0.4f);
     }
     public static void LightingPoint(Vector3 pos, GameObject obj)

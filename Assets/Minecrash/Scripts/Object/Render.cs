@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-
-
 public class Render : MonoBehaviour
 {
     Animator Anim;

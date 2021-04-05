@@ -153,7 +153,7 @@ public class MenuManager : MonoBehaviour
     }
     public void Exit()
     {
-        if (MapLoader.Mode == 1)
+        if (MapLoader.Mode == 1 && MapLoader.MapPlayer != null)
         {
             WorldData.world = (MapLoader.MapPlayer.Level - 1) / 99;
             SceneManager.LoadScene("MapSelect");

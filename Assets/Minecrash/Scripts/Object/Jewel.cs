@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 public class Jewel : MonoBehaviour
 {
@@ -260,6 +259,10 @@ public class Jewel : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
 
             mtransform.Find("Render").GetComponent<Renderer>().enabled = false;
+            if (mtransform.Find("Render").childCount > 0)
+            {
+                mtransform.Find("Render").GetChild(0).GetComponent<Renderer>().enabled = false;
+            }
             Effect.BlockClear(new Vector2(mtransform.position.x, mtransform.position.y), effect[7], type, 0.75f);
 
             Editor.cellprocess((int)PosMap.x, (int)PosMap.y);
@@ -283,6 +286,8 @@ public class Jewel : MonoBehaviour
     /// <returns></returns>
     bool PowerProcess(int power)
     {
+        bool isLandscapeMode = FindObjectOfType<AspectRatio>().scene.transform.localEulerAngles.z > 0;
+
         switch (power)
         {
             case 0:
@@ -295,13 +300,18 @@ public class Jewel : MonoBehaviour
             case 2:
                 //row lighting
                 Effect.RowLighting(mtransform.position.y, effect[3]);
-                Editor.RowLighting(PosMap);
+                if (isLandscapeMode)
+                    Editor.ColumnLighting(PosMap);
+                else
+                    Editor.RowLighting(PosMap);
                 return false;
             case 3:
                 //column lighting
                 Effect.ColumnLighting(mtransform.position.x, effect[4]);
-                Editor.ColumnLighting(PosMap);
-
+                if (isLandscapeMode)
+                    Editor.RowLighting(PosMap);
+                else
+                    Editor.ColumnLighting(PosMap);
                 return true;
             case 4://time 
                 GameObject.Find("Main Camera").GetComponent<Menu>().timeinc(BonusTime);
