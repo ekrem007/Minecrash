@@ -9,6 +9,8 @@ namespace ConsentManager.Platforms
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
 			return new AndroidConsentManager ();
+#elif UNITY_IPHONE && !UNITY_EDITOR
+			return new iOSConsentManager();
 #else
             return new Dummy.Dummy();
 #endif
@@ -18,6 +20,8 @@ namespace ConsentManager.Platforms
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
 			return new AndroidVendorBuilder (name, bundle, policyUrl);
+#elif UNITY_IPHONE && !UNITY_EDITOR
+			return new iOSVendorBuilder(name, bundle, policyUrl);
 #else
             return new Dummy.Dummy();
 #endif
@@ -27,6 +31,8 @@ namespace ConsentManager.Platforms
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
 			return new AndroidConsentFormBuilder();
+#elif UNITY_IPHONE && !UNITY_EDITOR
+            return new iOSConsentFormBuilder();
 #else
             return new Dummy.Dummy();
 #endif
@@ -36,6 +42,8 @@ namespace ConsentManager.Platforms
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
 			return new AndroidConsentManagerException();
+#elif UNITY_IPHONE && !UNITY_EDITOR
+			return new iOSConsentManagerException();
 #else
             return new Dummy.Dummy();
 #endif

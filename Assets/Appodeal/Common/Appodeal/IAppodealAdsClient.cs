@@ -20,7 +20,6 @@ namespace AppodealAds.Unity.Common
         void hide(int adTypes);
         void setAutoCache(int adTypes, bool autoCache);
         bool isPrecache(int adTypes);
-        void onResume(int adTypes);
         bool showBannerView(int YAxis, int XGravity, string Placement);
         bool showMrecView(int YAxis, int XGravity, string Placement);
         void hideBannerView();
@@ -31,7 +30,7 @@ namespace AppodealAds.Unity.Common
         void setTabletBanners(bool value);
         void setBannerRotation(int leftBannerRotation, int rightBannerRotation);
         void setTesting(bool test);
-        void setLogLevel(Appodeal.LogLevel level);
+        void setLogLevel(Api.Appodeal.LogLevel level);
         void setChildDirectedTreatment(bool value);
         void updateConsent(bool value);
         void updateConsent(Consent consent);
@@ -74,5 +73,7 @@ namespace AppodealAds.Unity.Common
         void setMrecCallbacks(IMrecAdListener listener);
         void requestAndroidMPermissions(IPermissionGrantedListener listener);
         void destroy(int adTypes);
+        void setSharedAdsInstanceAcrossActivities(bool value);
+        void setUseSafeArea(bool value);
     }
 }

@@ -179,13 +179,4 @@ public class MenuManager : MonoBehaviour
             Appodeal.hide(Appodeal.BANNER);
 #endif
     }
-    void OnApplicationFocus(bool hasFocus)
-    {
-#if UNITY_ANDROID || UNITY_IPHONE
-        if (hasFocus)
-        {
-            Appodeal.onResume(Appodeal.BANNER);
-        }
-#endif
-    }
 }
