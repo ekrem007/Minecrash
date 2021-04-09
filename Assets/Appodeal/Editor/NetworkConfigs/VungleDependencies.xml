@@ -1,7 +1,4 @@
 <dependencies>
-    <iosPods>
-        <iosPod name='APDVungleAdapter' version='2.9.1.1' minTargetSdk='10.0'/>
-    </iosPods>
     <androidPackages>
         <androidPackage spec='com.appodeal.ads.sdk.networks:vungle:2.9.2.7@aar'/>
         <androidPackage spec='com.vungle:publisher-sdk-android:6.9.1'/>

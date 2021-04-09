@@ -1,7 +1,4 @@
 <dependencies>
-    <iosPods>
-        <iosPod name='APDIronSourceAdapter' version='2.9.1.2' minTargetSdk='10.0'/>
-    </iosPods>
     <androidPackages>
         <androidPackage spec='com.ironsource.sdk:mediationsdk:7.1.4.1'/>
         <androidPackage spec='com.appodeal.ads.sdk.networks:ironsource:2.9.2.11@aar'/>

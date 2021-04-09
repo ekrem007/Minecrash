@@ -1,7 +1,4 @@
 <dependencies>
-    <iosPods>
-        <iosPod name='APDFacebookAudienceAdapter' version='2.9.1.2' minTargetSdk='10.0'/>
-    </iosPods>
     <androidPackages>
         <androidPackage spec='com.appodeal.ads.sdk.networks:facebook:2.9.2.12@aar'/>
         <androidPackage spec='com.facebook.android:audience-network-sdk:6.3.0@aar'/>
