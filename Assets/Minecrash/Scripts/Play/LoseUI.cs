@@ -25,15 +25,12 @@ public class LoseUI : MonoBehaviour
         }
 #if UNITY_ANDROID || UNITY_IPHONE
         Handheld.Vibrate();
-        switch (Random.Range(0, 3))
+        switch (Random.Range(0, 2))
         {
             case 0:
                 Appodeal.show(Appodeal.INTERSTITIAL);
                 break;
             case 1:
-                Appodeal.show(Appodeal.NON_SKIPPABLE_VIDEO);
-                break;
-            case 2:
                 Appodeal.show(Appodeal.REWARDED_VIDEO);
                 break;
         }

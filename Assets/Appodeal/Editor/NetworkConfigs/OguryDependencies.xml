@@ -1,8 +1,0 @@
-<dependencies>
-    <androidPackages>
-        <androidPackage spec='com.appodeal.ads.sdk.networks:ogury:2.9.2.7'/>
-        <repositories>
-            <repository>https://artifactory.appodeal.com/artifactory/appodeal</repository>
-        </repositories>
-    </androidPackages>
-</dependencies>
