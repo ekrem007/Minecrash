@@ -35,7 +35,7 @@ public class AdManager : MonoBehaviour, IPermissionGrantedListener
         {
             DontDestroyOnLoad(this.gameObject);
         }
-#if UNITY_ANDROID || UNITY_IPHONE
+#if UNITY_ANDROID
         Appodeal.requestAndroidMPermissions(this);
 #endif
     }
