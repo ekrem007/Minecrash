@@ -84,7 +84,8 @@ public class Cell : MonoBehaviour
             CellScript.map[x, y] = Type;
             if (JewelSpawn.JewelList[x, y] != null)
                 JewelSpawn.JewelList[x, y].GetComponent<Jewel>().JewelProcessing();
-            transform.GetChild(0).GetComponent<Animator>().enabled = true;
+            if (transform.childCount > 0)
+                transform.GetChild(0).GetComponent<Animator>().enabled = true;
 
             if (s == 4)
             {
